@@ -11,8 +11,8 @@ Programa creado para que practiquen los conocimietos
 adquiridos durante la semana
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
+__author__ = "PabloRuizDiaz"
+__email__ = "rd.pablo@gmail.com"
 __version__ = "1.3"
 
 
@@ -20,7 +20,7 @@ def ej1():
     # Ejercicios de práctica con números
     print('Nuestra primera calculadora')
     '''
-    Realice un calculadora, se ingresará por línea de comando dos
+    Realice una calculadora, se ingresará por línea de comando dos
     números reales y se deberá calcular todas las operaciones entre ellos:
     - Suma
     - Resta
@@ -34,9 +34,17 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
+  
+    print('Se realizara la suma de dos numeros, favor de ingresarlos separados por la tecla ENTER (numeros decimales con ".")')
+    numero_1 = float(input())
+    numero_2 = float(input())
+
+    suma = numero_1 + numero_2
+    print('La suma de', numero_1, 'y',numero_2, 'es', suma)
 
 
 def ej2():
+    print('\n')
     print('Ejercicios de práctica numérica y cadenas')
     '''
     Realice un programa que consulte por consola:
@@ -56,8 +64,21 @@ def ej2():
 
     '''
 
+    print('Favor de ingresar su nombre completo, y finalizar con ENTER:')
+    nombre = str(input())
+    print('Favor de ingresar su DNI completo (sin puntos), y finalizar con ENTER:')
+    dni = int(input())
+    print('Favor de ingresar su edad, y finalizar con ENTER:')
+    edad = int(input())
+    print('Favor de ingresar su altura (unidad en cm), y finalizar con ENTER:')
+    altura = float(input())
+
+    print('El Nombre completo ingresado es', nombre, 'y su DNI es', dni)
+    print(nombre, 'tiene una edad de',edad,'y una altura de', altura, 'cm')
+
 
 def ej3():
+    print('\n')
     print('Ejercicios de práctica con cadenas')
 
     '''
@@ -90,9 +111,21 @@ def ej3():
 
     '''
 
+    print('Favor de ingresar el 1er nombre completo del Padre o Madre (Nombre, Apellido), y finalizar con ENTER:')
+    nombre_1 = str(input())
+    print('Favor de ingresar el 2do nombre completo del Padre o Madre (Nombre, Apellido), y finalizar con ENTER:')
+    nombre_2 = str(input())
+    print('Favor de ingresar el nombre del hijo/a, y finalizar con ENTER:')
+    nombre_3 = str(input())
+
+    print('La nueva persona ingresada tiene la posibilidad de tener su nombre completo como:')
+    print(nombre_3, nombre_1.split(', ')[1], nombre_2.split(', ')[1])
+    print(nombre_3, nombre_2.split(', ')[1], nombre_1.split(', ')[1])
+
 
 def ej4():
     # Ejercicios de práctica con cadenas
+    print('\n')
     print('Comencemos a ponernos serios')
     '''
     Realice un programa que determine si una persona_2
@@ -124,9 +157,17 @@ def ej4():
     Cualquier duda con el método split pueden consultarla por el campus
     '''
 
+    print('Ingresar Nombre y Apellido (Nombre, Apellido) de la 1ra persona, y finalizar con ENTER:')
+    persona_1 = str(input())
+    print('Ingresar Nombre y Apellido (Nombre, Apellido) de la 2da persona, y finalizar con ENTER:')
+    persona_2 = str(input())
+
+    print('Tienen parentezco la 1ra Persona con la 2da?', persona_2.split(', ')[1] in persona_1)
+
 
 def ej5():
     # Ejercicios de práctica con cadenas
+    print('\n')
     print('Ahora si! buena suerte!')
     '''
     Realice un programa que reciba por consola su nombre completo
@@ -150,11 +191,19 @@ def ej5():
     Cualquier duda con estos métodos pueden consultarla por el campus
     '''
 
+    print('Introduzca su nombre completo por favor:')
+    nombre = str(input())
+
+    print('\n')
+    print(nombre.lower())
+    print(nombre.upper())
+    print(nombre.capitalize())
+
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    # ej2()
-    # ej3()
-    # ej4()
-    # ej5()
+    ej2()
+    ej3()
+    ej4()
+    ej5()
